@@ -37,10 +37,10 @@ jobs:
 
   deploy: 
     name: Deploy
-    needed: test-build 
+    needs: test-build 
     runs-on: unbuntu-latest 
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' 
-    permisstion: 
+    permissions: 
       contents: write 
 
      
